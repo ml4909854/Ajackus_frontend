@@ -1,0 +1,338 @@
+/* General dashboard layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #4b6cb7;
+}
+
+/* Dashboard body layout */
+.dashboard-body {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ========================= */
+/* User Form styling */
+/* ========================= */
+.user-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form h2 {
+  margin-bottom: 20px;
+  color: #4b6cb7;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.user-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.user-form input:focus {
+  outline: none;
+  border-color: #4b6cb7;
+  box-shadow: 0 0 5px rgba(75,108,183,0.3);
+}
+
+.user-form .form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.user-form button {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user-form button:first-child {
+  background-color: #4b6cb7;
+  color: white;
+}
+
+.user-form button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.user-form button:hover {
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* User Table styling */
+.table-container {
+  flex: 2;
+  min-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.table-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.table-controls input,
+.table-controls select,
+.table-controls button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.table-controls button {
+  background-color: #4b6cb7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.table-controls button:hover {
+  background-color: #395298;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background-color: #4b6cb7;
+  color: white;
+  border-radius: 5px;
+}
+
+table td button {
+  padding: 5px 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table td button:first-child {
+  background-color: #ffa500;
+  color: white;
+}
+
+table td button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+table td button:hover {
+  opacity: 0.8;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4b6cb7;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+}
+
+/* ========================= */
+/* Responsive Media Queries */
+/* ========================= */
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .dashboard-body {
+    flex-direction: column;
+  }
+
+  .user-form,
+  .table-container {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+/* ========================= */
+/* Mobile Improvements       */
+/* ========================= */
+/* ========================= */
+/* Mobile-First / Mobile Only */
+/* ========================= */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 10px;
+    overflow-x: hidden; /* Prevent whole page horizontal scroll */
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .dashboard-body {
+    flex-direction: column; /* Stack form and table */
+    gap: 15px;
+    width: 100%;
+  }
+
+  /* Form */
+  .user-form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .user-form h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .user-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+
+  .user-form .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-form button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Table container */
+  .table-container {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    overflow-x: auto; /* Only table scrolls horizontally */
+    box-sizing: border-box;
+  }
+
+  /* Table controls */
+  .table-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .table-controls input,
+  .table-controls select,
+  .table-controls button {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+  }
+
+  /* Table */
+  table {
+    width: 100%;
+    min-width: 600px; /* allow horizontal scroll inside table */
+    border-collapse: collapse;
+  }
+
+  table th, table td {
+    padding: 8px 6px;
+    font-size: 0.85rem;
+  }
+
+  table th {
+    font-size: 0.9rem;
+  }
+
+  table td button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Pagination */
+  .pagination {
+    flex-direction: row;
+    gap: 6px;
+    align-items: stretch;
+  }
+
+  .pagination button {
+    width: 20%;
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+}
