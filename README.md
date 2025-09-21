@@ -1,6 +1,6 @@
 🧑‍💻 User Management Dashboard
 
-A responsive full-stack User Management Dashboard that allows you to create, read, update, and delete (CRUD) users efficiently. Built with React.js frontend and Node.js + Express.js backend, with MongoDB Atlas as the database.
+A responsive MERN-stack User Management Dashboard that allows you to create, read, update, and delete (CRUD) users efficiently. Built with React.js frontend and Node.js + Express.js backend, with MongoDB Atlas as the database.
 
 This dashboard is mobile-friendly, tablet-ready, and desktop-compatible, providing an intuitive interface for managing user data.
 
